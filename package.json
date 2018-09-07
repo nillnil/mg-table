@@ -1,0 +1,75 @@
+{
+  "name": "mg-table",
+  "description": "A aswesome table. Base on element-ui el-table",
+  "version": "0.1.0",
+  "author": "nillnil <2073582423@qq.com>",
+  "license": "MIT",
+  "private": false,
+  "main": "lib/index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --progress --open --hot",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "publish": "npm run build && npm publish",
+    "lint": "eslint --ext .js,.vue src",
+    "test": "npm run lint",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "keywords": [
+    "vue",
+    "element-ui",
+    "table"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nillnil/mg-table"
+  },
+  "bugs": {
+    "url": "https://github.com/nillnil/mg-table/issues"
+  },
+  "dependencies": {
+    "vue": "^2.5.17"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-helper-vue-jsx-merge-props": "^2.0.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-plugin-transform-vue-jsx": "^3.5.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.28.7",
+    "element-ui": "^2.4.6",
+    "eslint": "4.19.1",
+    "eslint-friendly-formatter": "4.0.1",
+    "eslint-loader": "2.0.0",
+    "eslint-plugin-vue": "4.7.1",
+    "file-loader": "^1.1.1",
+    "husky": "0.14.3",
+    "lint-staged": "^7.2.2",
+    "optimize-css-assets-webpack-plugin": "5.0.1",
+    "url-loader": "^0.5.8",
+    "vue-loader": "^15.4.1",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8"
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
