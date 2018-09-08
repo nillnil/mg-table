@@ -5,6 +5,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 const isProd = process.env.NODE_ENV === 'production'
+const isDeploy = process.env.ENV_CONFIG === 'deploy'
 
 let externals = {}
 
@@ -23,10 +24,10 @@ if (isProd) {
 
 module.exports = {
   mode: process.env.NODE_ENV,
-  entry: isProd ? './src/index.js' : './src/main.js',
+  entry: (isProd && !isDeploy) ? './src/index.js' : './src/main.js',
   output: {
-    path: path.resolve(__dirname, './lib'),
-    publicPath: '/lib/',
+    path: isDeploy ? path.resolve(__dirname, './dist') : path.resolve(__dirname, './lib'),
+    publicPath: isDeploy ? '/dist/' : '/lib/',
     filename: 'index.js',
     library: 'mgtable',
     libraryTarget: 'umd',

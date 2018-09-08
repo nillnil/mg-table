@@ -1,7 +1,7 @@
 {
   "name": "mg-table",
   "description": "A aswesome table. Base on element-ui el-table",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": "nillnil <2073582423@qq.com>",
   "license": "MIT",
   "private": false,
@@ -9,10 +9,13 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --progress --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "build:deploy": "cross-env NODE_ENV=production ENV_CONFIG=deploy webpack --progress --hide-modules",
     "pub": "npm run build && npm publish",
     "lint": "eslint --ext .js,.vue src",
     "test": "npm run lint",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "predeploy":"npm run build:deploy",
+    "deploy":"gh-pages -d dist"
   },
   "lint-staged": {
     "src/**/*.{js,vue}": [
@@ -37,6 +40,7 @@
   "bugs": {
     "url": "https://github.com/nillnil/mg-table/issues"
   },
+  "homepage":"https://nillnil.github.com/mg-table",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
@@ -55,6 +59,7 @@
     "eslint-loader": "2.0.0",
     "eslint-plugin-vue": "4.7.1",
     "file-loader": "^1.1.1",
+    "gh-pages": "^1.2.0",
     "husky": "0.14.3",
     "lint-staged": "^7.2.2",
     "optimize-css-assets-webpack-plugin": "5.0.1",
