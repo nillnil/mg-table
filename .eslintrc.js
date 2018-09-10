@@ -22,6 +22,7 @@ module.exports = {
       }
     }],
     "vue/name-property-casing": ["error", "PascalCase"],
+    'vue/require-default-prop': 'off',
     'accessor-pairs': 2,
     'arrow-spacing': [2, {
       'before': true,
