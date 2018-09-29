@@ -39,14 +39,13 @@ rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
     if (process.env.env_config === 'prod') {
       console.log(
         chalk.yellow(
-          ' Tip: built files are meant to be served over an HTTP server.\n' +
-          " Opening index.html over file:// won't work.\n"
+          ' Now you can run npm publish. upload to npm.\n'
         )
       )
     } else if (process.env.env_config === 'deploy') {
       console.log(
         chalk.yellow(
-          ' Now you can run npm publish. upload to npm.\n'
+          ' Now you can run npm deploy. commit to gh-pages branch.\n'
         )
       )
     }

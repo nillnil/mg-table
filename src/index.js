@@ -1,7 +1,7 @@
-import mgtable from './packages/table'
+import MgTable from './packages/table'
 
-mgtable.install = function(Vue) {
-  Vue.component(mgtable.name, mgtable)
+MgTable.install = function(Vue) {
+  Vue.component(MgTable.name, MgTable)
 }
 
-export default mgtable
+export default MgTable

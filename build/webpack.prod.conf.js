@@ -35,7 +35,8 @@ const webpackConfig = merge(baseWebpackConfig, {
       amd: 'vue'
     },
     'element-ui/lib/table': 'element-ui/lib/table',
-    'element-ui/lib/table-column': 'element-ui/lib/table-column'
+    'element-ui/lib/table-column': 'element-ui/lib/table-column',
+    'element-ui/lib/pagination': 'element-ui/lib/pagination'
   },
   module: {
     rules: utils.styleLoaders({

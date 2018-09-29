@@ -2,6 +2,9 @@
 
 All notable changes to `mg-table` will be documented in this file
 
+## 1.0.0 - 2018-09-29
+- Release version 1.0.0
+
 ## 0.1.5 - 2018-09-11
 - Modify the build script
 
